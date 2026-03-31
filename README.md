@@ -9,14 +9,14 @@
 
 ### 🏥 Dashboard
 <p align="center">
-  <img src="images/Dashboard.png" width="850"/>
+  <img src="ChronoCardio-AI/images/Dashboard.png" width="850"/>
 </p>
 
 ---
 
 ### 🧪 Patient Risk Analysis
 <p align="center">
-  <img src="images/PatientAnalysis01.png" width="400"/>
+  <img src="ChronoCardio-AI/images/PatientAnalysis01.png" width="400"/>
   <img src="images/PatientAnalysis02.png" width="400"/>
 </p>
 
