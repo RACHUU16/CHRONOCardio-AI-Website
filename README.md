@@ -17,32 +17,32 @@
 ### 🧪 Patient Risk Analysis
 <p align="center">
   <img src="ChronoCardio-AI/images/PatientAnalysis01.png" width="400"/>
-  <img src="images/PatientAnalysis02.png" width="400"/>
+  <img src="ChronoCardio-AI/images/PatientAnalysis02.png" width="400"/>
 </p>
 
 <p align="center">
-  <img src="images/PatientAnalysis03.png" width="400"/>
+  <img src="ChronoCardio-AI/images/PatientAnalysis03.png" width="400"/>
 </p>
 
 ---
 
 ### 📄 Patient History & Reports
 <p align="center">
-  <img src="images/PatientHistory_Reports.png" width="750"/>
+  <img src="ChronoCardio-AI/images/PatientHistory_Reports.png" width="750"/>
 </p>
 
 ---
 
 ### 📝 Patient Report
 <p align="center">
-  <img src="images/PatientReport.png" width="500"/>
+  <img src="ChronoCardio-AI/images/PatientReport.png" width="500"/>
 </p>
 
 ---
 
 ### 📝 Patient Registration
 <p align="center">
-  <img src="images/PatientRegistration.png" width="500"/>
+  <img src="ChronoCardio-AI/images/PatientRegistration.png" width="500"/>
 </p>
 
 ---
