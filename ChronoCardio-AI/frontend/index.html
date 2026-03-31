@@ -1,0 +1,64 @@
+
+  <!DOCTYPE html>
+  <html lang="en">
+    <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>CHRONOCardioAI</title>
+      <script>
+        // CRITICAL: Immediate redirect handler - runs before React loads
+        (function() {
+          try {
+            const currentUrl = window.location.href;
+            console.log('Initial URL check:', currentUrl);
+            
+            // Check if we're on Supabase verify endpoint
+            if (currentUrl.includes('supabase.co/auth/v1/verify')) {
+              const urlParams = new URLSearchParams(window.location.search);
+              const token = urlParams.get('token');
+              const type = urlParams.get('type');
+              const redirectTo = urlParams.get('redirect_to');
+              
+              console.log('Supabase verify endpoint detected');
+              console.log('Token:', token ? 'Present' : 'Missing');
+              console.log('Type:', type);
+              console.log('Redirect to:', redirectTo);
+              
+              if (type === 'recovery' && token) {
+                // Build redirect URL - use redirect_to if provided, otherwise use current origin
+                let targetUrl = redirectTo;
+                if (!targetUrl || targetUrl.trim() === '') {
+                  targetUrl = window.location.origin + '/reset-password';
+                }
+                targetUrl = targetUrl.trim().replace(/\s+/g, '');
+                
+                // Ensure it's a full URL
+                if (!targetUrl.startsWith('http')) {
+                  targetUrl = window.location.origin + targetUrl;
+                }
+                
+                const redirectUrl = targetUrl + '?token=' + encodeURIComponent(token) + '&type=' + type;
+                
+                console.log('Redirecting to:', redirectUrl);
+                
+                // Use replace to avoid back button issues
+                window.location.replace(redirectUrl);
+                return; // Exit immediately
+              } else {
+                console.log('Missing token or type, redirecting to home');
+                window.location.replace(window.location.origin);
+                return;
+              }
+            }
+          } catch (error) {
+            console.error('Redirect handler error:', error);
+          }
+        })();
+      </script>
+    </head>
+    <body>
+      <div id="root"></div>
+      <script type="module" src="/src/main.tsx"></script>
+    </body>
+  </html>
+  
